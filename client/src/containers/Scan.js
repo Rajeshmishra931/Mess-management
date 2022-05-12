@@ -1,6 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import Scanner from "../components/Scanner/Scanner";
 import { ActionsContext } from "../contexts/context";
+import axios from "axios";
 
 const Scan = () => {
   const [message, setMessage] = useState("");

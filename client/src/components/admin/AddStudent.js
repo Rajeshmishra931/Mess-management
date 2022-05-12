@@ -21,7 +21,7 @@ const AddStudent = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .post("http://localhost:5000/api/students/add", {
+      .post("/api/students/add", {
         name: inputs.name,
         enroll: inputs.enroll,
         year: inputs.year,

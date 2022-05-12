@@ -20,7 +20,7 @@ const Write = () => {
   };
   const sendRequest = async (message) => {
     const res = await axios
-      .post("http://localhost:5000/api/meal/add", {
+      .post("/api/meal/add", {
         enroll: text,
       })
       .catch((err) => console.log(err));

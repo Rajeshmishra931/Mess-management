@@ -11,23 +11,14 @@ const Write = () => {
       // This line will avoid showing the native NFC UI reader
       await ndef.scan();
       await ndef.write({ records: [{ recordType: "text", data: message }] });
-      sendRequest().then((data) => console.log(data));
+      
       alert(`Value Saved!`);
     } catch (error) {
       alert(error);
       console.log(error);
     }
   };
-  const sendRequest = async (message) => {
-    const res = await axios
-      .post("/api/meal/add", {
-        enroll: text,
-      })
-      .catch((err) => console.log(err));
-    const data = await res.data;
-    // console.log(data);
-    return data;
-  };
+  
 
   return <Writer writeFn={onWrite} />;
 };

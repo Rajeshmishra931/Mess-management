@@ -32,10 +32,10 @@ const Scan = () => {
     }
   }, [setActions]);
 
-  const sendRequest = async (message) => {
+  const sendRequest = async () => {
     const res = await axios
       .post("/api/meal/add", {
-        enroll: text,
+        enroll: message,
       })
       .catch((err) => console.log(err));
     const data = await res.data;
